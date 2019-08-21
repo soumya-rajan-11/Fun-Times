@@ -1,5 +1,5 @@
     
-package com.cart;
+package shoppingcart.src.main.java.com.cart;
 
 import java.math.BigDecimal;
 
