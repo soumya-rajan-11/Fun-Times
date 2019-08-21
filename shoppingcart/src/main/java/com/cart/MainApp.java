@@ -7,7 +7,7 @@ public class MainApp {
 
 
 	    public static void main(String[] args) {
-	    	ShoppingCart grocery = new ShoppingCart();
+	    	ShoppingCart cart = new ShoppingCart();
 			Scanner scan = new Scanner(System.in);
 			int quantity ;
 			int input;
@@ -18,22 +18,22 @@ public class MainApp {
 			case 1:
 				System.out.println("enter the quantity required:");
 				 quantity = scan.nextInt();
-				grocery.addItem(ItemDetails.SOUP, quantity);
+				cart.addItem(ItemDetails.SOUP, quantity);
 				break;
 			case 2:
 				System.out.println("enter the quantity required:");
 				 quantity = scan.nextInt();
-				grocery.addItem(ItemDetails.BREAD, quantity);
+				cart.addItem(ItemDetails.BREAD, quantity);
 				break;
 			case 3:
 				System.out.println("enter the quantity required:");
 				 quantity = scan.nextInt();
-				grocery.addItem(ItemDetails.MILK, quantity);
+				cart.addItem(ItemDetails.MILK, quantity);
 				break;
 			case 4:
 				System.out.println("enter the quantity required:");
 				 quantity = scan.nextInt();
-				grocery.addItem(ItemDetails.APPLE, quantity);
+				cart.addItem(ItemDetails.APPLE, quantity);
 				break;
 			default:
 				break;
@@ -44,10 +44,10 @@ public class MainApp {
 		int date = scan.nextInt();
 		if(date>1) {
 			System.out.printf("Total Rupees : Rs %f",
-					grocery.calculateCartValue(LocalDate.now().plusDays(5)));
+					cart.calculateCartValue(LocalDate.now().plusDays(5)));
 		}else {
 			System.out.printf("Total Rupees : Rs %f",
-					grocery.calculateCartValue(LocalDate.now()));	
+					cart.calculateCartValue(LocalDate.now()));	
 		}
 	    }
 
